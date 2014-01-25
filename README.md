@@ -21,3 +21,9 @@ func main() {
 	fmt.Printf("%+v\n", result)
 }
 ```
+
+returns a struct like:
+
+```
+{Lat:45.46420639999999 Lng:9.1892441 Success:true}
+```
