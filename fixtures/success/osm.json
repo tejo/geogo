@@ -1,0 +1,21 @@
+[
+  {
+  "place_id": "20143141",
+  "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+  "osm_type": "node",
+  "osm_id": "1931425316",
+  "boundingbox": [
+    "44.9762535095215",
+    "44.9762573242188",
+    "9.03139209747314",
+    "9.03139305114746"
+  ],
+  "lat": "44.9762554",
+  "lon": "9.0313928",
+  "display_name": "La Ferretta, PV, Lombardy, Italy",
+  "class": "place",
+  "type": "hamlet",
+  "importance": 0.775,
+  "icon": "http://nominatim.openstreetmap.org/images/mapicons/poi_place_village.p.20.png"
+}
+]

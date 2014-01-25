@@ -1,0 +1,30 @@
+{
+  "results": [
+    {
+    "address_components": [],
+    "formatted_address": "Via Ferretta, 1, 27058 Voghera Pavia, Italy",
+    "geometry": {
+      "location": {
+        "lat": 44.98451,
+        "lng": 9.01891
+      },
+      "location_type": "ROOFTOP",
+      "viewport": {
+        "northeast": {
+          "lat": 44.9858589802915,
+          "lng": 9.020258980291503
+        },
+        "southwest": {
+          "lat": 44.9831610197085,
+          "lng": 9.017561019708499
+        }
+      }
+    },
+    "partial_match": true,
+    "types": [
+      "street_address"
+    ]
+  }
+  ],
+  "status": "OK"
+}
