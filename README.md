@@ -28,6 +28,17 @@ func main() {
 	geo := geogo.NewGeocoder()
 	result := geo.Geocode("duomo plaza, milan")
 	fmt.Printf("%+v\n", result)
+	
+	//specify api services and timeout (in milliseconds)
+	var geocoders = map[string]string{
+		"gmaps": "http://maps.googleapis.com/maps/api/geocode/json?sensor=true&address=%s",
+		"osm":   "http://nominatim.openstreetmap.org/search?format=json&q=%s",
+		"ymaps": "http://gws2.maps.yahoo.com/findlocation?format=json&pf=1&locale=en_US&flags=&offset=15&gflags=&q=%s",
+	}
+	geo = &geogo.Geocoder{geocoders, 1000}
+	result = geo.Geocode("via teodosio 65, milano")
+	fmt.Printf("%+v\n", result)
+
 }
 ```
 
