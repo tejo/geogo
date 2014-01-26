@@ -7,6 +7,15 @@ go geocode package
 Try to geocode provided address with google maps, open street maps and yahoo maps services  and returns the first responding api
 
 
+usage
+-----
+
+install pacakge
+```
+go get github.com/tejo/geogo
+```
+
+use it
 ```
 package main
 
@@ -22,8 +31,8 @@ func main() {
 }
 ```
 
-returns a struct like:
+output:
 
 ```
-{Lat:45.46420639999999 Lng:9.1892441 Success:true}
+&{Lat:45.46420639999999 Lng:9.1892441 Success:true}
 ```
