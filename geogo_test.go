@@ -13,22 +13,21 @@ import (
 
 func TestGeocoderFactory(t *testing.T) {
 	geocoder := NewGeocoder()
-	if len(geocoder.apiUrls) == 0 {
+	if len(geocoder.ApiUrls) == 0 {
 		t.Error("error initilaizing geocoder")
 	}
 }
 
-/* func TestGeocoder(t *testing.T) { */
-
-/* 	var mygeocoders = map[string]string{ */
-/* 		"gmaps": "http://maps.googleapis.com/maps/api/geocode/json?sensor=true&address=%s", */
-/* 		"osm":   "http://nominatim.openstreetmap.org/search?format=json&q=%s", */
-/* 		"ymaps": "http://gws2.maps.yahoo.com/findlocation?format=json&pf=1&locale=en_US&flags=&offset=15&gflags=&q=%s", */
-/* 	} */
-/* 	geo := &Geocoder{mygeocoders, 1000} */
-/* 	result := geo.Geocode("via teodosio 65, milano") */
-/* 	fmt.Printf("%+v\n", result) */
-/* } */
+func TestLookupFail(t *testing.T) {
+	var mygeocoders = map[string]string{
+		"gmaps": "http://a?q=%s",
+	}
+	geo := &Geocoder{mygeocoders, 1000}
+	result := geo.Geocode("via teodosio 65, milano")
+	if result.Success {
+		t.Error("error with not responding services")
+	}
+}
 
 func TestGeocodeRequest(t *testing.T) {
 	data, _ := NewMockResponse("fixtures/success/gmaps.json")

@@ -58,12 +58,14 @@ func (g *Geocoder) MultiLookup(query string) (result *Result) {
 func makeHttpRequest(addr string) ([]byte, int) {
 	r, err := http.Get(addr)
 	if err != nil {
-		log.Fatal(err)
+		log.Println(err)
+    return make([]byte,0), 500
 	}
 	defer r.Body.Close()
 	body, err := ioutil.ReadAll(r.Body)
 	if err != nil {
-		log.Fatal(err)
+		log.Println(err)
+    return make([]byte,0), 500
 	}
 
 	return body, r.StatusCode
